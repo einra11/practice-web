@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-let defaultTextColor='#fff';
 let defaultStyle={
-  color:defaultTextColor
+  color:'#fff'
 };
 
 class Playlist extends Component{
@@ -13,7 +12,7 @@ class Playlist extends Component{
       <div style={{...defaultStyle, display:'inline-block', width: "25%"}}>
         <img />
         <h3>Playlist Name</h3>
-        <ul><li>Song 1</li><li>Song 2</li><li>Song 3</li><li>https://youtu.be/jt4jYHKBsvU?t=665</li></ul>
+        <ul><li>Song 1</li><li>Song 2</li><li>Song 3</li><li><a href='https://youtu.be/jt4jYHKBsvU?t=803'>Where I Stopped</a></li></ul>
       </div>
     );
   }
@@ -31,7 +30,7 @@ class Aggregate extends Component{
 class Filter extends Component{
   render(){
     return(
-      <div style={{color:defaultTextColor}}>
+      <div style={{defaultStyle}}>
         <img/>
         <input type="txt"/>
       </div>
@@ -43,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>My Website</h1>
+        <h1>Title</h1>
         <Aggregate/>
         <Aggregate/>
         <Filter/>
